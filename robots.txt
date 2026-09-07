@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://b2gb2bconsulting.com/sitemap.xml
