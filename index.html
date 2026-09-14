@@ -66,6 +66,18 @@
   .plan ul{list-style:none;margin:0;padding:0}
   .plan li{font-size:14.5px;padding:7px 0 7px 20px;position:relative}
   .plan li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;background:var(--gold)}
+  .guarantee{max-width:760px;margin:30px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:14px 20px;font-size:15px;text-align:left;color:var(--muted)}
+  .guarantee b{color:var(--ink)}
+  .def{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);padding:28px 30px}
+  .def .flag{display:inline-block;background:var(--gold);color:#fff;font-size:12.5px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:12px}
+  .def h3{font-size:22px;margin:0 0 4px}
+  .def .sub{font-size:15px;color:var(--muted);margin:0 0 18px}
+  .defcols{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+  .defcols ul{list-style:none;margin:0;padding:0}
+  .defcols li{font-size:15px;padding:8px 0 8px 20px;position:relative;border-top:1px solid var(--line)}
+  .defcols li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;background:var(--gold)}
+  .defcols h4{font-family:"Source Serif 4",Georgia,serif;font-size:17px;margin:14px 0 2px}
+  @media (max-width:860px){.defcols{grid-template-columns:1fr}}
   .segs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .seg{background:#fff;border:1px solid var(--line);padding:20px 22px}
   .seg h3{font-size:18px;margin-bottom:6px}
@@ -99,12 +111,15 @@
     <div class="brand">B2G<b>·</b>B2B Consulting</div>
     <nav aria-label="Primary">
       <a href="#services">Services</a>
+      <a href="#defense">Defense</a>
       <a href="#segments">Segments</a>
       <a href="#process">Process</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#samples">Work samples</a>
       <a href="#history">History</a>
       <a href="#why">Why us</a>
       <a href="#plans">Engagement</a>
+      <a href="questionnaire.html">Questionnaire</a>
       <a href="articles.html">Articles</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -118,11 +133,12 @@
       <p>Independent consultancy for government and enterprise bidding — opportunity qualification, capture strategy, and Shipley/APMP proposal writing across US, Canadian and GCC markets.</p>
       <a class="btn" href="#contact">Discuss a bid</a>
       <a class="btn ghost" href="#services">See services</a>
+      <p class="guarantee"><b>Technical-Vetting Guarantee</b> — every solution is vetted with the OEMs and SMEs before it goes out: technical compliance, full adherence to solicitation instructions, and zero sales returns.</p>
       <div class="stats" role="list">
         <div class="stat" role="listitem"><div class="n">18+</div><div class="l">years in bids, sales &amp; procurement</div></div>
         <div class="stat" role="listitem"><div class="n">$300M+</div><div class="l">contracts &amp; proposals delivered</div></div>
         <div class="stat" role="listitem"><div class="n">1,200+</div><div class="l">B2B / B2G engagements</div></div>
-        <div class="stat" role="listitem"><div class="n">3</div><div class="l">markets: USA · Canada · GCC</div></div>
+        <div class="stat" role="listitem"><div class="n">200+</div><div class="l">tech vendors &amp; OEMs managed</div></div>
       </div>
     </div>
   </section>
@@ -152,6 +168,16 @@
           </ul>
         </div>
         <div class="grp">
+          <h3>Intelligence &amp; AI tooling</h3>
+          <ul>
+            <li>Procurement-intelligence dashboards (Power BI) &amp; alerts</li>
+            <li>Go/No-Go and Pwin decision tools</li>
+            <li>Federal &amp; multilateral opportunity trackers (SAM.gov, MERX, UNGM, World Bank)</li>
+            <li>Custom AI SaaS — built, documented and handed over, client-owned IP</li>
+            <li>Agentic-AI workflows: research, compliance-matrix extraction, response acceleration</li>
+          </ul>
+        </div>
+        <div class="grp">
           <h3>Deliver &amp; grow</h3>
           <ul>
             <li>Clarifications, BAFO &amp; negotiation support</li>
@@ -160,6 +186,41 @@
             <li>Vendor / OEM &amp; channel management</li>
             <li>BD-as-a-service retainer for standing pipelines</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="defense">
+    <div class="wrap">
+      <div class="sec-h"><h2>Defense procurement</h2><p>The specialty — US, Canadian, NATO and allied programs, from a single NSN line item to program-level capture.</p></div>
+      <div class="def">
+        <span class="flag">Specialty · worldwide</span>
+        <h3>DLA · DIBBS · SAM.gov · PSPC/DND · NATO</h3>
+        <p class="sub">Solicitation capture, quoting and approvals for defense supply chains — with the codification and compliance discipline these buyers audit against.</p>
+        <div class="defcols">
+          <div>
+            <h4>Solicitations &amp; bidding</h4>
+            <ul>
+              <li>DLA / DIBBS solicitations — RFQs, RFPs, automated and manual quoting</li>
+              <li>SAM.gov opportunity capture (DoD and civilian agencies)</li>
+              <li>Canadian federal &amp; defense: PSPC, SSC, DND, CanadaBuys/MERX</li>
+              <li>NATO, allied and coalition programs</li>
+              <li>Defense Bid/No-Bid, Pwin and price-to-win benchmarking</li>
+              <li>Incumbent &amp; competitor analysis (FPDS / USAspending)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Codification &amp; product approvals</h4>
+            <ul>
+              <li>NSN / NATO codification &amp; sourcing across a ~18M-item catalog</li>
+              <li>CAGE / NCAGE registration and supplier qualification</li>
+              <li>Product approval routes: QPL / QML, source-approval requests (SAR)</li>
+              <li>MIL-STD / MIL-PRF / DEF STAN / AQAP conformity positioning</li>
+              <li>NAICS / PSC / FSC mapping and catalog positioning</li>
+              <li>Export-control-aware technical files; counterfeit-part controls</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -201,11 +262,28 @@
         <div class="case"><b>CAD 5M</b> — new federal/SLED orders built as a direct government supplier in North America; every pursuit screened through in-house Bid/No-Bid and win-probability models.</div>
         <div class="case"><b>5 × 40 MW turbines</b> — the largest industrial lubricants supply agreement in the portfolio, won with an EPC for a gas-turbine first-fill program.</div>
         <div class="case"><b>PKR 40M</b> — first full high-efficiency (IE-class) motor plant revamp in a national market, won on the energy-standards business case.</div>
-        <div class="case"><b>41 boards + 55% IACS</b> — LV distribution boards delivered through an EPC, and a busbar award conditional on verified aluminium conductivity — factory-inspected before acceptance.</div>
-        <div class="case"><b>Diplomatic facility</b> — lighting and power distribution boards supplied for a diplomatic mission project; accepted at site without rework.</div>
-        <div class="case"><b>Tribunal-tested</b> — bid-challenge experience before Canada’s trade tribunal, from filing through decision; the compliance discipline that survives scrutiny is the one that wins cleanly.</div>
+        <div class="case"><b>61.63% vs 45% required</b> — 3 × 6000&nbsp;A busbar trunking delivered against a conductivity requirement of 45%, lab-verified at 61.63% before acceptance.</div>
+        <div class="case"><b>10 autonomous mobile robots</b> — supplied to a Government of Canada federal agency. Also: lighting and power distribution boards for a diplomatic mission facility, accepted at site without rework.</div>
+        <div class="case"><b>CITT protest won</b> — two bid protests filed before the Canadian International Trade Tribunal, one won; legal responses drafted personally.</div>
+        <div class="case"><b>Live federal pursuit — commercial refrigeration, US Army</b> — five-CLIN small-business set-aside dissected into a clause-by-clause compliance matrix: brand-name-or-equal evidence rules, F.O.B. Destination basis, Buy American country-of-origin certification, supply-chain prohibitions, and portal-only submission with amendment tracking.</div>
+        <div class="case"><b>2 AI SaaS products</b> — designed, built and handed over under NDA, with client-owned IP — plus redacted work samples available: a 23-manufacturer vendor study and a compliance-matrix-driven public-sector proposal.</div>
       </div>
       <p class="note">Methods: Shipley / APMP-aligned capture and proposal management.</p>
+    </div>
+  </section>
+
+  <section id="samples">
+    <div class="wrap">
+      <div class="sec-h"><h2>Work samples</h2><p>Redacted deliverables from live engagements. Manufacturer names, model numbers, client and company identities are removed; pages are flattened, watermarked images — the method is visible, the data is not.</p></div>
+      <div class="track">
+        <div class="case"><b>Instrument comparison — high-complexity</b> — multi-manufacturer requirement-by-requirement matrix across ultrasonic and meteorological instrumentation, with meets / exceeds / does-not-meet scoring against every stated parameter. <a href="work_samples/Sample-01_High-Complexity-Instrument-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
+        <div class="case"><b>USBL acoustic tracking comparison</b> — four-system evaluation for subsea ROV positioning against 19 stated requirements, including the single characteristic none of the field fully met. <a href="work_samples/Sample-02_USBL-Acoustic-Tracking-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
+        <div class="case"><b>Conductivity probe study — instrument brief</b> — product range, sensor technology, wetted materials and harsh-environment performance across competing manufacturers. <a href="work_samples/Sample-03_Conductivity-Probe-Instrument-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
+        <div class="case"><b>Conductivity probe study — product comparison</b> — the commercial companion: differentiators, proprietary technology claims verified against primary sources, and material performance analysis. <a href="work_samples/Sample-04_Conductivity-Probe-Product-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
+        <div class="case"><b>Fairness auditor — pre-qualification proposal</b> — a criterion-by-criterion qualifications submission (expertise, experience, service comprehension, capacity) written against the evaluation grid. <a href="work_samples/Sample-05_Fairness-Auditor-Proposal_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
+        <div class="case"><b>RFP tracking tool — Power BI</b> — self-built opportunity pipeline consolidating US military, US civilian and Canadian solicitations alongside enterprise sourcing feeds. Data blurred. <a href="work_samples/Sample-06_RFP-Tracking-Tool-PowerBI_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
+      </div>
+      <p class="note">Samples are provided for capability assessment only and remain the property of the respective engagements.</p>
     </div>
   </section>
 
@@ -230,6 +308,7 @@
         <div class="whyi"><b>Numbers before narrative</b><p>Bid/No-Bid, win probability and price-to-win built from award data — proposal money is only spent where the math says it should be.</p></div>
         <div class="whyi"><b>Every seat at the table</b><p>OEM seller, system integrator, direct government supplier, and challenger before a trade tribunal — the evaluator’s view is not a guess here.</p></div>
         <div class="whyi"><b>Three markets, one desk</b><p>US FED/SLED, Canadian federal/provincial and GCC portals, rules and buyer behaviour — without three different consultants.</p></div>
+        <div class="whyi"><b>Engineer, seller and builder</b><p>Most consultants are one thing. Mechatronics engineer who evaluates the product, bid lead who wins the contract, and founder of three businesses — including a manufacturing facility.</p></div>
         <div class="whyi"><b>Method, not heroics</b><p>Shipley / APMP discipline — compliance matrices, colour-team reviews, on-time submission — on every pursuit, not just the big ones.</p></div>
       </div>
     </div>
@@ -272,6 +351,46 @@
           </ul>
         </div>
       </div>
+      <div class="plans" style="margin-top:24px">
+        <div class="plan">
+          <h3>Vendor &amp; Supply-Chain Management</h3>
+          <p class="pr">from $2,400</p>
+          <p class="un">per program</p>
+          <ul>
+            <li>Vendor &amp; OEM identification against your requirement</li>
+            <li>Supplier qualification: capability, approvals, compliance screening</li>
+            <li>Quote solicitation and like-for-like comparison</li>
+            <li>Alternate / second-source development to de-risk single supply</li>
+            <li>Channel governance, terms and rules of engagement</li>
+            <li>Vendor scorecard and register handed over</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Technically Compliant Solution</h3>
+          <p class="pr">from $3,400</p>
+          <p class="un">per solution · competitive on technical grounds</p>
+          <ul>
+            <li>Specification decomposed clause by clause</li>
+            <li>Solution architected to meet every technical clause</li>
+            <li>Components and OEMs selected and vetted with the manufacturers</li>
+            <li>Standards &amp; certification routing (UL/CSA, CE/UKCA, IEC, SASO/SABER, GCC)</li>
+            <li>Technical compliance statement and deviation register</li>
+            <li>Costed BOM with competitive commercial positioning</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Defense Procurement</h3>
+          <p class="pr">On request</p>
+          <p class="un">priced separately · not published · NDA available</p>
+          <ul>
+            <li>DLA / DIBBS solicitations, RFQ &amp; RFP quoting</li>
+            <li>NSN / NATO codification and sourcing</li>
+            <li>CAGE / NCAGE registration &amp; supplier qualification</li>
+            <li>Product approvals: QPL / QML, source-approval requests</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" style="margin-top:22px"><b><a href="questionnaire.html">Complete the requirement questionnaire →</a></b> — six sections on scope, evaluation criteria, methodology and your own readiness; it returns an indicative lump-sum scope and price you can print or email.</p>
       <p class="note">Payment by international bank transfer (SWIFT), Payoneer, or local PKR transfer — details provided on the invoice, never on a webpage. NDAs are routine.</p>
     </div>
   </section>
