@@ -3,410 +3,271 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>B2G·B2B Consulting — Tenders, Procurement &amp; Proposal Writing</title>
-<meta name="description" content="Independent B2G and B2B consultancy: tender responses, procurement support, Shipley/APMP proposal writing, Bid/No-Bid and win-probability strategy for US, Canadian and GCC markets."/>
+<title>TECHVERIFY — Technical Compliance &amp; Product Evaluation</title>
+<meta name="description" content="TECHVERIFY — technical compliance to engineering and safety standards, and independent product evaluation for engineered products and IT hardware."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>
-  :root{--ink:#1C2B4A;--gold:#B9862B;--paper:#FBF9F5;--line:#E4DFD4;--muted:#5C6478;--maxw:1040px}
+  :root{
+    --blue:#2540E8;
+    --blue-tint:#E9EDFF;
+    --ink:#232848;
+    --muted:#5A6080;
+    --bg:#FFFFFF;
+    --maxw:960px;
+  }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
   html,body{margin:0;padding:0}
-  body{background:var(--paper);color:var(--ink);font-family:"Inter","Segoe UI",system-ui,sans-serif;font-size:16px;line-height:1.75}
-  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;color:var(--ink);margin:0}
-  a{color:var(--gold);text-decoration:none}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  header{position:sticky;top:0;background:rgba(251,249,245,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-  .bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
-  .brand{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em}
-  .brand b{color:var(--gold)}
-  nav{display:flex;gap:20px;flex-wrap:wrap}
-  nav a{color:var(--ink);font-size:14.5px;font-weight:600}
-  nav a:hover{color:var(--gold)}
-  .hero{padding:72px 0 30px;text-align:center}
-  .hero h1{font-size:clamp(34px,5.6vw,56px);line-height:1.12;max-width:900px;margin:0 auto 18px}
-  .hero h1 em{font-style:normal;color:var(--gold)}
-  .hero p{max-width:720px;margin:0 auto 26px;color:var(--muted);font-size:17px}
-  .btn{display:inline-block;font-weight:700;font-size:15.5px;padding:13px 28px;border-radius:8px;background:var(--ink);color:#fff;border:2px solid var(--ink)}
-  .btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
-  .btn.ghost{background:transparent;color:var(--ink);margin-left:10px}
-  .btn.ghost:hover{color:#fff}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:#fff;margin:46px auto 0;max-width:900px}
-  .stat{padding:20px 12px;text-align:center;border-left:1px solid var(--line)}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Inter","Segoe UI",system-ui,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;min-height:100vh;
+  }
+  a{color:var(--blue);text-decoration:none}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  header{padding:26px 0}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--blue);font-weight:700;letter-spacing:.28em;font-size:18px}
+  .brand svg{display:block}
+  nav.main{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+  nav.main a{color:var(--ink);font-size:14.5px;padding:4px 0;border-bottom:2px solid transparent}
+  nav.main a:hover{color:var(--blue)}
+  nav.main a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+  @media (max-width:760px){nav.main{gap:12px}}
+  .social{display:flex;align-items:center;gap:14px}
+  .social a{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1.5px solid var(--blue);border-radius:50%;transition:background-color .15s ease,color .15s ease}
+  .social a:hover,.social a:focus-visible{background:var(--blue);color:#fff}
+  .social svg{width:16px;height:16px}
+
+  main{flex:1;display:flex;flex-direction:column;justify-content:center}
+  .hero{text-align:center;padding:8px 0 0}
+  h1{
+    font-family:"Fredoka",system-ui,sans-serif;
+    font-weight:500;
+    color:var(--blue);
+    font-size:clamp(36px,6.5vw,60px);
+    line-height:1.02;
+    margin:6px 0 4px;
+    letter-spacing:.01em;
+  }
+  .hook{font-family:"Fredoka",system-ui,sans-serif;font-weight:500;color:#D9503F;font-size:clamp(34px,7vw,66px);line-height:1.05;margin:0 auto 14px;max-width:900px}
+  .hookby{font-size:15.5px;font-weight:700;color:var(--ink);margin:0 auto 24px;max-width:720px}
+  .hookby b{color:#D9503F}
+  .tagline{color:var(--blue);font-size:15.5px;margin:0 auto 22px;max-width:620px}
+  .covers-h{font-family:"Fredoka",system-ui,sans-serif;font-weight:500;color:var(--blue);font-size:20px;margin:10px 0 2px}
+  .covers-p{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+  .covers{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:12px 8px;max-width:960px;margin:0 auto 26px}
+  .cover{display:block;text-align:center;padding:10px 4px;border:1.5px solid transparent;border-radius:12px}
+  .cover:hover,.cover:focus-visible{border-color:var(--blue)}
+  .cover svg{width:46px;height:46px;display:block;margin:0 auto 6px}
+  .cover span{font-size:12.5px;color:var(--muted);display:block;line-height:1.3}
+  .cover:hover span{color:var(--blue)}
+  .lead{color:var(--ink);font-size:16px;max-width:640px;margin:0 auto 16px}
+  .lead.two{color:var(--muted)}
+
+  .actions{margin:26px auto 6px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .ctas{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .btn{
+    font-family:inherit;font-size:15.5px;font-weight:700;cursor:pointer;
+    padding:12px 26px;border-radius:26px;border:1.5px solid var(--blue);
+    background:var(--blue);color:#fff;transition:opacity .15s ease}
+  .btn:hover,.btn:focus-visible{opacity:.88}
+  .btn.ghost{background:#fff;color:var(--blue)}
+  .direct{font-size:14.5px;color:var(--muted)}
+  .direct a{border-bottom:1px solid rgba(37,64,232,.35)}
+  .note{font-size:13.5px;color:#8b90ab;margin-top:2px}
+
+  .art{margin:30px auto 0;width:100%;max-width:920px}
+  .art svg{width:100%;height:auto;display:block}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--line, #D8DCF2);margin:46px auto 0;max-width:860px}
+  .stat{padding:18px 10px;text-align:center;border-left:1px solid #D8DCF2}
   .stat:first-child{border-left:none}
-  .stat .n{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:28px;color:var(--gold)}
+  .stat .n{font-family:"Fredoka",system-ui,sans-serif;font-weight:500;color:var(--blue);font-size:26px;line-height:1.1}
   .stat .l{font-size:12.5px;color:var(--muted);margin-top:4px}
-  section{padding:64px 0 10px}
-  .sec-h{text-align:center;margin-bottom:34px}
-  .sec-h h2{font-size:32px}
-  .sec-h p{color:var(--muted);font-size:15.5px;max-width:640px;margin:8px auto 0}
-  .svc-groups{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
-  .grp{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);padding:24px 24px 16px}
-  .grp h3{font-size:20px;margin-bottom:12px}
-  .grp ul{list-style:none;margin:0;padding:0}
-  .grp li{font-size:15px;padding:8px 0 8px 20px;position:relative;border-top:1px solid var(--line)}
-  .grp li:first-child{border-top:none}
-  .grp li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;background:var(--gold)}
-  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:st}
-  .step{background:#fff;border:1px solid var(--line);padding:18px;counter-increment:st}
-  .step::before{content:counter(st);display:block;font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:24px;color:var(--gold)}
-  .step b{display:block;font-size:15.5px;margin:4px 0 4px}
-  .step span{font-size:13.5px;color:var(--muted)}
-  .track{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .case{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:16px 20px;font-size:15px}
-  .case b{color:var(--gold)}
-  .note{font-size:13px;color:var(--muted);text-align:center;margin-top:18px}
-  .plans{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
-  .plan{background:#fff;border:1px solid var(--line);padding:26px}
-  .plan.hot{border:2px solid var(--gold)}
-  .plan h3{font-size:20px}
-  .plan .pr{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:30px;margin:8px 0 2px}
-  .plan .un{font-size:13px;color:var(--muted);margin:0 0 14px}
-  .plan ul{list-style:none;margin:0;padding:0}
-  .plan li{font-size:14.5px;padding:7px 0 7px 20px;position:relative}
-  .plan li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;background:var(--gold)}
-  .guarantee{max-width:760px;margin:30px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:14px 20px;font-size:15px;text-align:left;color:var(--muted)}
-  .guarantee b{color:var(--ink)}
-  .def{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);padding:28px 30px}
-  .def .flag{display:inline-block;background:var(--gold);color:#fff;font-size:12.5px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:12px}
-  .def h3{font-size:22px;margin:0 0 4px}
-  .def .sub{font-size:15px;color:var(--muted);margin:0 0 18px}
-  .defcols{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
-  .defcols ul{list-style:none;margin:0;padding:0}
-  .defcols li{font-size:15px;padding:8px 0 8px 20px;position:relative;border-top:1px solid var(--line)}
-  .defcols li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;background:var(--gold)}
-  .defcols h4{font-family:"Source Serif 4",Georgia,serif;font-size:17px;margin:14px 0 2px}
-  @media (max-width:860px){.defcols{grid-template-columns:1fr}}
-  .segs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .seg{background:#fff;border:1px solid var(--line);padding:20px 22px}
-  .seg h3{font-size:18px;margin-bottom:6px}
-  .seg p{font-size:14.5px;color:var(--muted);margin:0}
-  .tl{list-style:none;padding:0;position:relative;max-width:760px;margin:0 auto}
-  .tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .tl li{position:relative;padding:0 0 26px 42px;font-size:15.5px}
-  .tl li::before{content:"";position:absolute;left:2px;top:5px;width:16px;height:16px;background:var(--gold);border:3px solid var(--paper)}
-  .tl b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:17px}
-  .tl span{color:var(--muted);font-size:14px}
-  .whygrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .whyi{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:18px 22px}
-  .whyi b{font-size:16px;display:block;margin-bottom:4px}
-  .whyi p{font-size:14.5px;color:var(--muted);margin:0}
-  @media (max-width:860px){.segs{grid-template-columns:1fr}.whygrid{grid-template-columns:1fr}}
-  .contact{background:var(--ink);color:#fff;margin-top:70px;padding:64px 0}
-  .contact h2{color:#fff;font-size:32px;text-align:center;margin-bottom:10px}
-  .contact p{color:#C9CFDD;text-align:center;max-width:620px;margin:0 auto 26px;font-size:15.5px}
-  .mailrow{text-align:center}
-  .mail{display:inline-block;font-weight:700;font-size:clamp(20px,4vw,32px);color:#fff;border:2px solid var(--gold);border-radius:12px;padding:14px 30px;word-break:break-all}
-  .mail:hover{background:var(--gold)}
-  .alt{color:#C9CFDD;font-size:14px;margin-top:16px;text-align:center}
-  .alt a{color:#fff;border-bottom:1px solid var(--gold)}
-  footer{background:var(--ink);color:#8E97AC;border-top:1px solid #2B3A5C;padding:20px 0 28px;text-align:center;font-size:13px}
-  @media (max-width:860px){.svc-groups,.plans{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:none}.track{grid-template-columns:1fr}nav{gap:12px}}
+  .areas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:960px;margin:34px auto 0;text-align:left}
+  .area{border:1.5px solid #D8DCF2;border-top:4px solid var(--blue);padding:16px 18px}
+  .area h2{font-family:"Fredoka",system-ui,sans-serif;font-weight:500;color:var(--blue);font-size:16px;margin:0}
+  .area p{font-size:13.5px;color:var(--muted);margin:6px 0 10px}
+  .area a{font-size:13.5px;font-weight:700}
+  .homecta{margin:38px 0 8px}
+  @media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:none}.areas{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.areas{grid-template-columns:1fr}}
+  footer{padding:22px 0 30px;text-align:center;color:var(--muted);font-size:13.5px}
+
+  @media (max-width:560px){
+    .brand{font-size:16px;letter-spacing:.2em}
+    .ctas{width:100%}
+    .btn{width:100%}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .art{opacity:0;transform:translateY(10px);animation:rise .7s ease .15s forwards}
+    @keyframes rise{to{opacity:1;transform:none}}
+  }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap bar">
-    <div class="brand">B2G<b>·</b>B2B Consulting</div>
-    <nav aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#defense">Defense</a>
-      <a href="#segments">Segments</a>
-      <a href="#process">Process</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#samples">Work samples</a>
-      <a href="#history">History</a>
-      <a href="#why">Why us</a>
-      <a href="#plans">Engagement</a>
-      <a href="questionnaire.html">Questionnaire</a>
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+        <circle cx="13" cy="13" r="10" fill="none" stroke="#2540E8" stroke-width="1.6"/>
+        <circle cx="13" cy="13" r="2" fill="#2540E8"/>
+        <line x1="1" y1="13" x2="25" y2="13" stroke="#2540E8" stroke-width="1" stroke-dasharray="5 3"/>
+        <line x1="13" y1="1" x2="13" y2="25" stroke="#2540E8" stroke-width="1" stroke-dasharray="5 3"/>
+      </svg>
+      TECHVERIFY
+    </div>
+    <nav class="main" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="quote.html">Get a Quote</a>
+      <a href="sectors.html">Sectors &amp; Standards</a>
+      <a href="industries.html">Industries</a>
       <a href="articles.html">Articles</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="social" aria-label="Contact">
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.2h4.2V24H.4zM8.3 8.2h4v2.2h.1c.56-1 1.9-2.2 3.9-2.2 4.2 0 5 2.7 5 6.3V24h-4.2v-6.9c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8.3z"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.4 8.5L23.3 22h-6.8l-5.3-6.9L5.1 22H2l7.9-9.1L1 2h7l4.8 6.3zM17.7 20h1.7L7.4 3.9H5.6z"/></svg></a>
+      <a id="mail" href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 6 9-6"/></svg></a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <h1>Tenders won. Proposals that comply. <em>Procurement that delivers.</em></h1>
-      <p>Independent consultancy for government and enterprise bidding — opportunity qualification, capture strategy, and Shipley/APMP proposal writing across US, Canadian and GCC markets.</p>
-      <a class="btn" href="#contact">Discuss a bid</a>
-      <a class="btn ghost" href="#services">See services</a>
-      <p class="guarantee"><b>Technical-Vetting Guarantee</b> — every solution is vetted with the OEMs and SMEs before it goes out: technical compliance, full adherence to solicitation instructions, and zero sales returns.</p>
-      <div class="stats" role="list">
-        <div class="stat" role="listitem"><div class="n">18+</div><div class="l">years in bids, sales &amp; procurement</div></div>
-        <div class="stat" role="listitem"><div class="n">$300M+</div><div class="l">contracts &amp; proposals delivered</div></div>
-        <div class="stat" role="listitem"><div class="n">1,200+</div><div class="l">B2B / B2G engagements</div></div>
-        <div class="stat" role="listitem"><div class="n">200+</div><div class="l">tech vendors &amp; OEMs managed</div></div>
-      </div>
-    </div>
-  </section>
+  <div class="wrap hero">
+    <h1>Get Technically Verified</h1>
+      <p class="hook">…before you get busted.</p>
+      <p class="hookby">by <b>customs</b> at the border · a <b>regulator</b> · an <b>auditor</b> · a <b>class surveyor</b> · your client’s <b>inspector</b></p>
 
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-h"><h2>Fifteen service areas, three stages</h2><p>Everything between "an opportunity exists" and "the contract is signed" — bought one at a time or as a program.</p></div>
-      <div class="svc-groups">
-        <div class="grp">
-          <h3>Find &amp; qualify</h3>
-          <ul>
-            <li>Opportunity identification &amp; pipeline (SAM.gov, MERX, provincial &amp; GCC portals)</li>
-            <li>Bid/No-Bid decisions with win-probability scoring</li>
-            <li>Registrations &amp; vendor onboarding (SAM.gov, supplier portals, pre-qualifications)</li>
-            <li>Market, competitor &amp; pricing intelligence</li>
-            <li>Teaming &amp; subcontracting positioning</li>
-          </ul>
-        </div>
-        <div class="grp">
-          <h3>Win</h3>
-          <ul>
-            <li>Capture planning (Shipley-aligned)</li>
-            <li>Full RFP / RFQ / RFI responses, end to end</li>
-            <li>Technical &amp; management volumes</li>
-            <li>Compliance matrices &amp; requirements traceability</li>
-            <li>Colour-team reviews (Pink / Red / Gold) &amp; executive summaries</li>
-          </ul>
-        </div>
-        <div class="grp">
-          <h3>Intelligence &amp; AI tooling</h3>
-          <ul>
-            <li>Procurement-intelligence dashboards (Power BI) &amp; alerts</li>
-            <li>Go/No-Go and Pwin decision tools</li>
-            <li>Federal &amp; multilateral opportunity trackers (SAM.gov, MERX, UNGM, World Bank)</li>
-            <li>Custom AI SaaS — built, documented and handed over, client-owned IP</li>
-            <li>Agentic-AI workflows: research, compliance-matrix extraction, response acceleration</li>
-          </ul>
-        </div>
-        <div class="grp">
-          <h3>Deliver &amp; grow</h3>
-          <ul>
-            <li>Clarifications, BAFO &amp; negotiation support</li>
-            <li>Debriefs and lessons-learned after award decisions</li>
-            <li>Bid-challenge support (tribunal &amp; protest processes)</li>
-            <li>Vendor / OEM &amp; channel management</li>
-            <li>BD-as-a-service retainer for standing pipelines</li>
-          </ul>
-        </div>
-      </div>
+    <h2 class="covers-h">Engineered products we verify</h2>
+    <p class="covers-p">Every category below maps to its governing standards — tap any to see them.</p>
+    <div class="covers">
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="18" width="24" height="18" rx="4" fill="#E9EDFF"/><line x1="32" y1="27" x2="42" y2="27" stroke-width="3"/><rect x="14" y="12" width="12" height="6" fill="#FFFFFF"/></svg><span>Motors</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="12" width="24" height="26" rx="2" fill="#E9EDFF"/><rect x="16" y="16" width="12" height="7" fill="#FFFFFF"/><line x1="39" y1="14" x2="39" y2="36"/><line x1="43" y1="14" x2="43" y2="36"/></svg><span>Drives</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="8" width="24" height="36" fill="#E9EDFF"/><line x1="26" y1="8" x2="26" y2="44"/><line x1="14" y1="22" x2="38" y2="22"/><line x1="14" y1="33" x2="38" y2="33"/></svg><span>Switchgear</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="16" width="32" height="20" rx="2" fill="#FFFFFF"/><rect x="14" y="20" width="24" height="3" fill="#2540E8" stroke="none"/><rect x="14" y="25" width="24" height="3" fill="#2540E8" stroke="none"/><rect x="14" y="30" width="24" height="3" fill="#2540E8" stroke="none"/></svg><span>Busbar</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" aria-hidden="true"><circle cx="26" cy="26" r="16" fill="#FFFFFF"/><circle cx="26" cy="26" r="10" stroke-dasharray="3 3"/><circle cx="26" cy="26" r="4" fill="#E9EDFF"/></svg><span>Cables</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="26" cy="24" r="15" fill="#FFFFFF"/><line x1="26" y1="24" x2="35" y2="15" stroke-width="2.5"/><circle cx="26" cy="24" r="2.5" fill="#2540E8" stroke="none"/><rect x="22" y="39" width="8" height="6" fill="#E9EDFF"/></svg><span>Instruments</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="36" height="24" rx="3" fill="#E9EDFF"/><line x1="13" y1="20" x2="30" y2="20"/><line x1="13" y1="25" x2="24" y2="25"/><circle cx="35" cy="29" r="5" fill="#FFFFFF"/><circle cx="35" cy="29" r="1.4" fill="#2540E8" stroke="none"/></svg><span>HVAC</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" aria-hidden="true"><rect x="12" y="8" width="28" height="36" fill="#FFFFFF"/><line x1="26" y1="8" x2="26" y2="44"/><line x1="12" y1="26" x2="40" y2="26"/><rect x="12" y="8" width="14" height="18" fill="#E9EDFF"/></svg><span>Windows / doors</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><polygon points="10,20 10,34 26,27" fill="#E9EDFF"/><polygon points="42,20 42,34 26,27" fill="#E9EDFF"/><line x1="26" y1="27" x2="26" y2="14"/><line x1="20" y1="14" x2="32" y2="14"/></svg><span>Plumbing</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="14" width="24" height="24" fill="#E9EDFF"/><rect x="21" y="21" width="10" height="10" fill="#FFFFFF"/><line x1="9" y1="20" x2="14" y2="20"/><line x1="9" y1="26" x2="14" y2="26"/><line x1="9" y1="32" x2="14" y2="32"/><line x1="38" y1="20" x2="43" y2="20"/><line x1="38" y1="26" x2="43" y2="26"/><line x1="38" y1="32" x2="43" y2="32"/></svg><span>Electronics</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="26" cy="11" r="4" fill="#E9EDFF"/><line x1="26" y1="15" x2="26" y2="40"/><line x1="16" y1="21" x2="36" y2="21"/><path d="M26 40 C19 40 13 35 11 28"/><path d="M26 40 C33 40 39 35 41 28"/></svg><span>Marine</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><circle cx="26" cy="28" r="19" stroke-dasharray="4 4" stroke-width="1.5"/><path d="M26 12 C32 19 35 24 35 29 A9 9 0 1 1 17 29 C17 24 20 19 26 12 Z" fill="#E9EDFF"/></svg><span>Ex / hazardous</span></a>
+      <a class="cover" href="sectors.html"><svg viewBox="0 0 52 52" fill="none" stroke="#2540E8" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M26 8 L42 14 V26 C42 36 34 42 26 46 C18 42 10 36 10 26 V14 Z" fill="#E9EDFF"/><polygon points="26,16 28.2,21.9 34.6,22.2 29.6,26.2 31.3,32.3 26,28.8 20.7,32.3 22.4,26.2 17.4,22.2 23.8,21.9" fill="#FFFFFF"/></svg><span>Defense / NATO</span></a>
     </div>
-  </section>
 
-  <section id="defense">
-    <div class="wrap">
-      <div class="sec-h"><h2>Defense procurement</h2><p>The specialty — US, Canadian, NATO and allied programs, from a single NSN line item to program-level capture.</p></div>
-      <div class="def">
-        <span class="flag">Specialty · worldwide</span>
-        <h3>DLA · DIBBS · SAM.gov · PSPC/DND · NATO</h3>
-        <p class="sub">Solicitation capture, quoting and approvals for defense supply chains — with the codification and compliance discipline these buyers audit against.</p>
-        <div class="defcols">
-          <div>
-            <h4>Solicitations &amp; bidding</h4>
-            <ul>
-              <li>DLA / DIBBS solicitations — RFQs, RFPs, automated and manual quoting</li>
-              <li>SAM.gov opportunity capture (DoD and civilian agencies)</li>
-              <li>Canadian federal &amp; defense: PSPC, SSC, DND, CanadaBuys/MERX</li>
-              <li>NATO, allied and coalition programs</li>
-              <li>Defense Bid/No-Bid, Pwin and price-to-win benchmarking</li>
-              <li>Incumbent &amp; competitor analysis (FPDS / USAspending)</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Codification &amp; product approvals</h4>
-            <ul>
-              <li>NSN / NATO codification &amp; sourcing across a ~18M-item catalog</li>
-              <li>CAGE / NCAGE registration and supplier qualification</li>
-              <li>Product approval routes: QPL / QML, source-approval requests (SAR)</li>
-              <li>MIL-STD / MIL-PRF / DEF STAN / AQAP conformity positioning</li>
-              <li>NAICS / PSC / FSC mapping and catalog positioning</li>
-              <li>Export-control-aware technical files; counterfeit-part controls</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <p class="tagline">Technical compliance evaluation · engineering safety &amp; standards · design evaluation · market readiness</p>
 
-  <section id="segments">
-    <div class="wrap">
-      <div class="sec-h"><h2>Segments served</h2><p>Different buyers, different rulebooks — the same numbers-first discipline.</p></div>
-      <div class="segs">
-        <div class="seg"><h3>Government &amp; Defense</h3><p>US federal &amp; SLED, Canadian federal/provincial, defense supply chains — registrations, set-asides, NSN/NATO-coded requirements.</p></div>
-        <div class="seg"><h3>Energy, Oil &amp; Gas</h3><p>NOC and EPC tenders from FEED to award — automation, electrical and services packages, brownfield programs.</p></div>
-        <div class="seg"><h3>Industrial &amp; Manufacturing</h3><p>Plant revamps, OEM channel bids, spec-driven equipment tenders where compliance decides the shortlist.</p></div>
-        <div class="seg"><h3>IT &amp; Technology</h3><p>Hardware, AIDC, A/V and SaaS into government and enterprise — catalog positioning and framework agreements.</p></div>
-        <div class="seg"><h3>Construction &amp; MEP</h3><p>Electrical, mechanical and envelope packages through EPCs and general contractors — bid-to-acceptance.</p></div>
-        <div class="seg"><h3>SMEs entering government</h3><p>First registrations, first pipeline, first win — a working B2G capability built from zero.</p></div>
-      </div>
-    </div>
-  </section>
+    <p class="lead">TECHVERIFY is a technical-compliance, design-evaluation and market-readiness practice for engineered products and IT hardware — motors, drives, switchgear, cables, instruments, HVAC, and electronics.</p>
+    <p class="lead two">We map products to the engineering and safety standards that govern them (IEC, EN, ISO, UL/CSA), manage conformity and market access (CE/UKCA, UL/CSA, SASO/SABER, GCC), and evaluate and benchmark products so you can specify and buy with confidence.</p>
 
-  <section id="process">
-    <div class="wrap">
-      <div class="sec-h"><h2>How a bid runs</h2><p>The same discipline on every pursuit — so proposal money is only spent where the numbers justify it.</p></div>
-      <div class="steps">
-        <div class="step"><b>Qualify</b><span>Bid/No-Bid scored on win probability before a dollar of effort.</span></div>
-        <div class="step"><b>Capture</b><span>Win themes, competitor ghosting, pricing posture.</span></div>
-        <div class="step"><b>Draft</b><span>Compliant volumes written against the matrix.</span></div>
-        <div class="step"><b>Review</b><span>Pink / Red / Gold colour teams before submission.</span></div>
-        <div class="step"><b>Submit &amp; debrief</b><span>On-time filing, clarifications, and the post-award debrief.</span></div>
+    <div class="actions">
+      <div class="ctas">
+        <a class="btn" href="quote.html">Get an instant quote</a>
+        <a class="btn ghost" id="requestLink" href="#">Request an evaluation</a>
       </div>
+      <p class="direct">Free 20-minute scoping call · written, evidence-backed deliverables · NDA available</p>
     </div>
-  </section>
 
-  <section id="portfolio">
-    <div class="wrap">
-      <div class="sec-h"><h2>Portfolio</h2><p>Delivered pursuits and programs. Client identities withheld by design; figures as delivered. References available in a scoped discussion.</p></div>
-      <div class="track">
-        <div class="case"><b>SAR 450M</b> — automation order for 638 well sites for a Gulf national oil company; the department’s largest award at the time, managed from FEED through award.</div>
-        <div class="case"><b>17 bulk plants</b> — terminal-management upgrade programs captured and delivered across a national fuels network, with parts agreements protecting the installed base.</div>
-        <div class="case"><b>CAD 5M</b> — new federal/SLED orders built as a direct government supplier in North America; every pursuit screened through in-house Bid/No-Bid and win-probability models.</div>
-        <div class="case"><b>5 × 40 MW turbines</b> — the largest industrial lubricants supply agreement in the portfolio, won with an EPC for a gas-turbine first-fill program.</div>
-        <div class="case"><b>PKR 40M</b> — first full high-efficiency (IE-class) motor plant revamp in a national market, won on the energy-standards business case.</div>
-        <div class="case"><b>61.63% vs 45% required</b> — 3 × 6000&nbsp;A busbar trunking delivered against a conductivity requirement of 45%, lab-verified at 61.63% before acceptance.</div>
-        <div class="case"><b>10 autonomous mobile robots</b> — supplied to a Government of Canada federal agency. Also: lighting and power distribution boards for a diplomatic mission facility, accepted at site without rework.</div>
-        <div class="case"><b>CITT protest won</b> — two bid protests filed before the Canadian International Trade Tribunal, one won; legal responses drafted personally.</div>
-        <div class="case"><b>Live federal pursuit — commercial refrigeration, US Army</b> — five-CLIN small-business set-aside dissected into a clause-by-clause compliance matrix: brand-name-or-equal evidence rules, F.O.B. Destination basis, Buy American country-of-origin certification, supply-chain prohibitions, and portal-only submission with amendment tracking.</div>
-        <div class="case"><b>2 AI SaaS products</b> — designed, built and handed over under NDA, with client-owned IP — plus redacted work samples available: a 23-manufacturer vendor study and a compliance-matrix-driven public-sector proposal.</div>
-      </div>
-      <p class="note">Methods: Shipley / APMP-aligned capture and proposal management.</p>
+    <div class="art">
+      <svg viewBox="0 0 920 400" xmlns="http://www.w3.org/2000/svg" role="img" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <title>Isometric line-art of engineered products and IT hardware, used worldwide</title>
+        <path d="M420 120 C445 102 470 138 495 120 S545 102 570 120" stroke="#2540E8" stroke-width="3"/>
+        <g stroke="#2540E8" stroke-width="1" opacity="0.3" stroke-dasharray="4 5">
+          <line x1="350" y1="150" x2="420" y2="122"/>
+          <line x1="660" y1="120" x2="775" y2="150"/>
+          <line x1="560" y1="245" x2="605" y2="290"/>
+        </g>
+        <polygon points="250,150 320,185 265,212.5 195,177.5" fill="#E9EDFF" stroke="#2540E8" stroke-width="2"/>
+        <polygon points="250,150 195,177.5 195,327.5 250,300" fill="#FFFFFF" stroke="#2540E8" stroke-width="2"/>
+        <polygon points="250,150 320,185 320,335 250,300" fill="#FFFFFF" stroke="#2540E8" stroke-width="2"/>
+        <g stroke="#2540E8" stroke-width="1">
+          <line x1="250" y1="170" x2="320" y2="205"/>
+          <line x1="250" y1="190" x2="320" y2="225"/>
+          <line x1="250" y1="210" x2="320" y2="245"/>
+          <line x1="250" y1="230" x2="320" y2="265"/>
+          <line x1="250" y1="250" x2="320" y2="285"/>
+          <line x1="250" y1="270" x2="320" y2="305"/>
+          <line x1="250" y1="290" x2="320" y2="325"/>
+        </g>
+        <polygon points="250,190 320,225 320,245 250,210" fill="#2540E8"/>
+        <polygon points="430,270 490,300 440,325 380,295" fill="#E9EDFF" stroke="#2540E8" stroke-width="2"/>
+        <polygon points="430,270 380,295 380,355 430,330" fill="#FFFFFF" stroke="#2540E8" stroke-width="2"/>
+        <polygon points="430,270 490,300 490,360 430,330" fill="#FFFFFF" stroke="#2540E8" stroke-width="2"/>
+        <g stroke="#2540E8" stroke-width="1">
+          <line x1="430" y1="270" x2="440" y2="325"/>
+          <line x1="490" y1="300" x2="380" y2="295"/>
+        </g>
+        <line x1="569" y1="273" x2="569" y2="345" stroke="#2540E8" stroke-width="2"/>
+        <line x1="641" y1="273" x2="641" y2="345" stroke="#2540E8" stroke-width="2"/>
+        <path d="M569 345 A36 18 0 0 0 641 345" stroke="#2540E8" stroke-width="2"/>
+        <path d="M569 300 A36 18 0 0 0 641 300" stroke="#2540E8" stroke-width="1"/>
+        <path d="M569 322 A36 18 0 0 0 641 322" stroke="#2540E8" stroke-width="1"/>
+        <ellipse cx="605" cy="273" rx="36" ry="18" fill="#E9EDFF" stroke="#2540E8" stroke-width="2"/>
+        <line x1="593" y1="266" x2="593" y2="259" stroke="#2540E8" stroke-width="1.5"/>
+        <line x1="617" y1="266" x2="617" y2="259" stroke="#2540E8" stroke-width="1.5"/>
+        <ellipse cx="605" cy="259" rx="12" ry="6" fill="#FFFFFF" stroke="#2540E8" stroke-width="1.5"/>
+        <path d="M120 292 L215 292 A10 28 0 0 1 215 348 L120 348 Z" fill="#2540E8"/>
+        <ellipse cx="120" cy="320" rx="10" ry="28" fill="#2540E8" stroke="#2540E8" stroke-width="2"/>
+        <ellipse cx="120" cy="320" rx="5" ry="16" fill="#FFFFFF"/>
+        <circle cx="815" cy="165" r="46" fill="#FFFFFF" stroke="#2540E8" stroke-width="2"/>
+        <ellipse cx="815" cy="165" rx="46" ry="15" stroke="#2540E8" stroke-width="1.5"/>
+        <ellipse cx="815" cy="165" rx="15" ry="46" stroke="#2540E8" stroke-width="1.5"/>
+        <ellipse cx="815" cy="165" rx="33" ry="46" stroke="#2540E8" stroke-width="1"/>
+        <line x1="769" y1="165" x2="861" y2="165" stroke="#2540E8" stroke-width="1"/>
+        <g stroke="#2540E8" stroke-width="1.5">
+          <line x1="343" y1="150" x2="357" y2="150"/><line x1="350" y1="143" x2="350" y2="157"/>
+          <line x1="553" y1="245" x2="567" y2="245"/><line x1="560" y1="238" x2="560" y2="252"/>
+          <line x1="698" y1="335" x2="712" y2="335"/><line x1="705" y1="328" x2="705" y2="342"/>
+          <line x1="173" y1="235" x2="187" y2="235"/><line x1="180" y1="228" x2="180" y2="242"/>
+          <line x1="740" y1="250" x2="754" y2="250"/><line x1="747" y1="243" x2="747" y2="257"/>
+        </g>
+      </svg>
     </div>
-  </section>
 
-  <section id="samples">
-    <div class="wrap">
-      <div class="sec-h"><h2>Work samples</h2><p>Redacted deliverables from live engagements. Manufacturer names, model numbers, client and company identities are removed; pages are flattened, watermarked images — the method is visible, the data is not.</p></div>
-      <div class="track">
-        <div class="case"><b>Instrument comparison — high-complexity</b> — multi-manufacturer requirement-by-requirement matrix across ultrasonic and meteorological instrumentation, with meets / exceeds / does-not-meet scoring against every stated parameter. <a href="work_samples/Sample-01_High-Complexity-Instrument-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
-        <div class="case"><b>USBL acoustic tracking comparison</b> — four-system evaluation for subsea ROV positioning against 19 stated requirements, including the single characteristic none of the field fully met. <a href="work_samples/Sample-02_USBL-Acoustic-Tracking-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
-        <div class="case"><b>Conductivity probe study — instrument brief</b> — product range, sensor technology, wetted materials and harsh-environment performance across competing manufacturers. <a href="work_samples/Sample-03_Conductivity-Probe-Instrument-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
-        <div class="case"><b>Conductivity probe study — product comparison</b> — the commercial companion: differentiators, proprietary technology claims verified against primary sources, and material performance analysis. <a href="work_samples/Sample-04_Conductivity-Probe-Product-Comparison_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
-        <div class="case"><b>Fairness auditor — pre-qualification proposal</b> — a criterion-by-criterion qualifications submission (expertise, experience, service comprehension, capacity) written against the evaluation grid. <a href="work_samples/Sample-05_Fairness-Auditor-Proposal_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
-        <div class="case"><b>RFP tracking tool — Power BI</b> — self-built opportunity pipeline consolidating US military, US civilian and Canadian solicitations alongside enterprise sourcing feeds. Data blurred. <a href="work_samples/Sample-06_RFP-Tracking-Tool-PowerBI_REDACTED.pdf" target="_blank" rel="noopener">View sample →</a></div>
-      </div>
-      <p class="note">Samples are provided for capability assessment only and remain the property of the respective engagements.</p>
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><div class="n">18+</div><div class="l">years in technical sales, bids &amp; procurement</div></div>
+      <div class="stat" role="listitem"><div class="n">$300M+</div><div class="l">in contracts &amp; proposals delivered</div></div>
+      <div class="stat" role="listitem"><div class="n">1,200+</div><div class="l">B2B / B2G engagements</div></div>
+      <div class="stat" role="listitem"><div class="n">18M</div><div class="l">NSN-coded items in the sourcing catalogue</div></div>
     </div>
-  </section>
 
-  <section id="history">
-    <div class="wrap">
-      <div class="sec-h"><h2>History</h2><p>Eighteen-plus years on every side of the tender table.</p></div>
-      <ul class="tl">
-        <li><b>2007 — Engineering sales, Siemens Pakistan</b><span>Motors, drives and LV portfolio; first plant-revamp wins built on efficiency standards.</span></li>
-        <li><b>2010 — Proposals, Siemens Saudi Arabia (Oil &amp; Gas)</b><span>Automation bids for a Gulf national oil company from FEED to award; kingdom-wide channel management.</span></li>
-        <li><b>2016 — Sales &amp; proposals, Gulf lubricants major</b><span>Industrial supply agreements including the turbine first-fill program.</span></li>
-        <li><b>2017 — Co-founder, system-integration business</b><span>Panel building and integration; government-facility and EPC deliveries.</span></li>
-        <li><b>2020 — North America, direct B2G/B2B supply</b><span>US FED/SLED and Canadian pursuits as a direct supplier; in-house Bid/No-Bid and win-probability tooling; CAD 5M in new orders.</span></li>
-        <li><b>Today — B2G·B2B Consulting</b><span>Independent practice serving clients across the USA, Canada and the GCC.</span></li>
-      </ul>
+    <div class="areas">
+      <div class="area"><h2>Technical Compliance Evaluation</h2><p>Certificates, test reports and products verified against the governing standard — before acceptance.</p><a href="services.html">See the service</a></div>
+      <div class="area"><h2>Engineering Safety &amp; Standards</h2><p>The standards landscape per product family — and the failure modes those standards prevent.</p><a href="sectors.html">See sectors &amp; standards</a></div>
+      <div class="area"><h2>Design Evaluation</h2><p>Independent design review and benchmarking against the standard and the alternatives.</p><a href="services.html">See the service</a></div>
+      <div class="area"><h2>Market Readiness</h2><p>CE/UKCA, UL/CSA, SASO/SABER, GCC, marine class and Ex routes — from file to marking.</p><a href="pricing.html">See modules &amp; pricing</a></div>
     </div>
-  </section>
 
-  <section id="why">
-    <div class="wrap">
-      <div class="sec-h"><h2>Why this desk</h2><p>What eighteen years of sitting on every side of the table buys you.</p></div>
-      <div class="whygrid">
-        <div class="whyi"><b>Numbers before narrative</b><p>Bid/No-Bid, win probability and price-to-win built from award data — proposal money is only spent where the math says it should be.</p></div>
-        <div class="whyi"><b>Every seat at the table</b><p>OEM seller, system integrator, direct government supplier, and challenger before a trade tribunal — the evaluator’s view is not a guess here.</p></div>
-        <div class="whyi"><b>Three markets, one desk</b><p>US FED/SLED, Canadian federal/provincial and GCC portals, rules and buyer behaviour — without three different consultants.</p></div>
-        <div class="whyi"><b>Engineer, seller and builder</b><p>Most consultants are one thing. Mechatronics engineer who evaluates the product, bid lead who wins the contract, and founder of three businesses — including a manufacturing facility.</p></div>
-        <div class="whyi"><b>Method, not heroics</b><p>Shipley / APMP discipline — compliance matrices, colour-team reviews, on-time submission — on every pursuit, not just the big ones.</p></div>
-      </div>
+    <div class="homecta">
+      <a class="btn" href="quote.html">Start your assessment</a>
+      <a class="btn ghost" href="pricing.html">See modules &amp; pricing</a>
     </div>
-  </section>
-
-  <section id="plans">
-    <div class="wrap">
-      <div class="sec-h"><h2>Engagement models</h2><p>Starting points in USD — every engagement begins with a free 20-minute scoping call, and the invoice governs.</p></div>
-      <div class="plans">
-        <div class="plan">
-          <h3>Proposal Sprint</h3>
-          <p class="pr">from $1,450</p>
-          <p class="un">per bid · single response</p>
-          <ul>
-            <li>Compliance matrix from the solicitation</li>
-            <li>Response drafted, formatted, submission-ready</li>
-            <li>One revision round</li>
-          </ul>
-        </div>
-        <div class="plan hot">
-          <h3>Capture + Proposal</h3>
-          <p class="pr">from $3,900</p>
-          <p class="un">per pursuit · the full playbook</p>
-          <ul>
-            <li>Bid/No-Bid with win-probability scoring</li>
-            <li>Capture plan: win themes, ghosting, pricing posture</li>
-            <li>Full volumes + colour-team reviews</li>
-            <li>Clarifications &amp; BAFO support</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>BD Retainer</h3>
-          <p class="pr">from $2,900</p>
-          <p class="un">per month · standing pipeline</p>
-          <ul>
-            <li>Weekly opportunity pipeline for your codes/markets</li>
-            <li>Bid/No-Bid on every opportunity</li>
-            <li>Two Proposal Sprints included monthly</li>
-            <li>Registrations kept current</li>
-          </ul>
-        </div>
-      </div>
-      <div class="plans" style="margin-top:24px">
-        <div class="plan">
-          <h3>Vendor &amp; Supply-Chain Management</h3>
-          <p class="pr">from $2,400</p>
-          <p class="un">per program</p>
-          <ul>
-            <li>Vendor &amp; OEM identification against your requirement</li>
-            <li>Supplier qualification: capability, approvals, compliance screening</li>
-            <li>Quote solicitation and like-for-like comparison</li>
-            <li>Alternate / second-source development to de-risk single supply</li>
-            <li>Channel governance, terms and rules of engagement</li>
-            <li>Vendor scorecard and register handed over</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>Technically Compliant Solution</h3>
-          <p class="pr">from $3,400</p>
-          <p class="un">per solution · competitive on technical grounds</p>
-          <ul>
-            <li>Specification decomposed clause by clause</li>
-            <li>Solution architected to meet every technical clause</li>
-            <li>Components and OEMs selected and vetted with the manufacturers</li>
-            <li>Standards &amp; certification routing (UL/CSA, CE/UKCA, IEC, SASO/SABER, GCC)</li>
-            <li>Technical compliance statement and deviation register</li>
-            <li>Costed BOM with competitive commercial positioning</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>Defense Procurement</h3>
-          <p class="pr">On request</p>
-          <p class="un">priced separately · not published · NDA available</p>
-          <ul>
-            <li>DLA / DIBBS solicitations, RFQ &amp; RFP quoting</li>
-            <li>NSN / NATO codification and sourcing</li>
-            <li>CAGE / NCAGE registration &amp; supplier qualification</li>
-            <li>Product approvals: QPL / QML, source-approval requests</li>
-          </ul>
-        </div>
-      </div>
-      <p class="note" style="margin-top:22px"><b><a href="questionnaire.html">Complete the requirement questionnaire →</a></b> — six sections on scope, evaluation criteria, methodology and your own readiness; it returns an indicative lump-sum scope and price you can print or email.</p>
-      <p class="note">Payment by international bank transfer (SWIFT), Payoneer, or local PKR transfer — details provided on the invoice, never on a webpage. NDAs are routine.</p>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <h2>Start with the solicitation</h2>
-      <p>Send the RFP link or document, the deadline, and one line on why you can win it — a scoped reply comes back with the approach, the price, and the timeline.</p>
-      <div class="mailrow"><a class="mail" href="mailto:umersidiqii@gmail.com?subject=Bid%20inquiry">umersidiqii@gmail.com</a></div>
-      <p class="alt">LinkedIn: <a href="https://www.linkedin.com/in/uscagcc" target="_blank" rel="noopener">linkedin.com/in/uscagcc</a></p>
-    </div>
-  </section>
+  </div>
 </main>
 
 <footer>
-  <div class="wrap">© 2026 B2G·B2B Consulting — Umer Siddiqui, Independent Consultant. Tenders · procurement · proposal writing.</div>
+  <div class="wrap">© 2026 TECHVERIFY — technical compliance, design evaluation &amp; market readiness.</div>
 </footer>
+
+<script>
+  // ── Set your contact address here ───────────────────────────────
+  const CONTACT = "umersidiqii@gmail.com";
+  // ────────────────────────────────────────────────────────────────
+  document.getElementById('mail').href = "mailto:" + CONTACT;
+  document.getElementById('requestLink').href =
+    "mailto:" + CONTACT + "?subject=" + encodeURIComponent("Request an evaluation");
+
+</script>
 </body>
 </html>
